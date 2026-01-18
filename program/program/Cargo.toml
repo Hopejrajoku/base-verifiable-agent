@@ -1,0 +1,15 @@
+[package]
+version = "0.1.0"
+name = "fibonacci-program"
+edition = "2021"
+
+[dependencies]
+# We use the ZKVM-optimized library, NOT the full SDK
+sp1-zkvm = "5.0.8" 
+alloy-sol-types = "=0.7.7"
+fibonacci-lib = { path = "../lib" }
+
+[profile.release]
+lto = true
+panic = "abort"
+opt-level = 3

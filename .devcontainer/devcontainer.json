@@ -1,0 +1,14 @@
+{
+    "name": "Base Agent Dev Environment",
+    "image": "mcr.microsoft.com/devcontainers/rust:1",
+    "postCreateCommand": "curl -L https://foundry.paradigm.xyz | bash && /home/vscode/.foundry/bin/foundryup && cargo install --git https://github.com/succinctlabs/sp1.git sp1up && sp1up",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "JuanBlanco.solidity",
+                "rust-lang.rust-analyzer",
+                "tamasfe.even-better-toml"
+            ]
+        }
+    }
+}
